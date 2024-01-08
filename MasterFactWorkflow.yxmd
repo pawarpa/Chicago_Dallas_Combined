@@ -1,0 +1,1118 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1278" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\Payal\AppData\Local\Temp\Engine_24236_0a6f0f30732a9846a7e715c6eafd769f_\Engine_24236_abbd2c7656fcc94ab985199db1d9c4c7~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1182" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="InspectionSK" selected="True" />
+            <SelectField field="DateSK" selected="True" />
+            <SelectField field="FacilitySK" selected="True" />
+            <SelectField field="RiskSK" selected="True" />
+            <SelectField field="Address_key" selected="True" />
+            <SelectField field="InspectionTypeSK" selected="True" />
+            <SelectField field="OutcomeSK" selected="True" />
+            <SelectField field="LicenseSK" selected="True" />
+            <SelectField field="Restaurant_key" selected="True" />
+            <SelectField field="DI_CreateDate" selected="True" type="Date" size="10" />
+            <SelectField field="DI_WorkFlowFileName" selected="True" />
+            <SelectField field="DI_WorkFlowDirectory" selected="True" />
+            <SelectField field="InspectionDate" selected="True" type="Date" size="10" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="1074" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>InspectionSK</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="966" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="DateTimeNow()" field="DI_CreateDate" size="19" type="DateTime" />
+            <FormulaField expression="[Engine.WorkflowFileName]" field="DI_WorkFlowFileName" size="1073741823" type="V_WString" />
+            <FormulaField expression="[Engine.WorkflowDirectory]" field="DI_WorkFlowDirectory" size="1073741823" type="V_WString" />
+            <FormulaField expression="[C_ID]+[D_ID]" field="InspectionDate" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DI_CreateDate = DateTimeNow()
+DI_WorkFlowFileName = [Engine.WorkflowFileName]
+DI...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="354" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords>4DB260473E12D2B9FA659420987AE73D7AB63700282D101930416EFB837F240DEC12D</Passwords>
+          <File RecordLimit="" FileFormat="23">odbc:DSN=chicago;UID=root;PWD=__EncPwd1__|||select stg_chicago1.* 
+from stg_chicago1</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <ReadCentroids>False</ReadCentroids>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <SessionReadOnly>True</SessionReadOnly>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=chicago
+Query=select stg_chicago1.* 
+from...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="ChicagoFoodInspection_SK" source="File: odbc:DSN=chicago;UID=root;PWD=__EncPwd1__|||select stg_chicago1.* &#xA;from stg_chicago1" type="Int32" />
+            <Field name="Inspection ID" source="File: odbc:DSN=chicago;UID=root;PWD=__EncPwd1__|||select stg_chicago1.* &#xA;from stg_chicago1" type="Int32" />
+            <Field name="DBA Name" size="79" source="File: odbc:DSN=chicago;UID=root;PWD=__EncPwd1__|||select stg_chicago1.* &#xA;from stg_chicago1" type="V_WString" />
+            <Field name="AKA Name" size="79" source="File: odbc:DSN=chicago;UID=root;PWD=__EncPwd1__|||select stg_chicago1.* &#xA;from stg_chicago1" type="V_WString" />
+            <Field name="License #" source="File: odbc:DSN=chicago;UID=root;PWD=__EncPwd1__|||select stg_chicago1.* &#xA;from stg_chicago1" type="Int32" />
+            <Field name="Facility Type" size="47" source="File: odbc:DSN=chicago;UID=root;PWD=__EncPwd1__|||select stg_chicago1.* &#xA;from stg_chicago1" type="V_WString" />
+            <Field name="Risk" size="15" source="File: odbc:DSN=chicago;UID=root;PWD=__EncPwd1__|||select stg_chicago1.* &#xA;from stg_chicago1" type="WString" />
+            <Field name="Address" size="51" source="File: odbc:DSN=chicago;UID=root;PWD=__EncPwd1__|||select stg_chicago1.* &#xA;from stg_chicago1" type="V_WString" />
+            <Field name="City" size="20" source="File: odbc:DSN=chicago;UID=root;PWD=__EncPwd1__|||select stg_chicago1.* &#xA;from stg_chicago1" type="V_WString" />
+            <Field name="State" size="2" source="File: odbc:DSN=chicago;UID=root;PWD=__EncPwd1__|||select stg_chicago1.* &#xA;from stg_chicago1" type="WString" />
+            <Field name="Zip" source="File: odbc:DSN=chicago;UID=root;PWD=__EncPwd1__|||select stg_chicago1.* &#xA;from stg_chicago1" type="Int32" />
+            <Field name="Inspection Type" size="41" source="File: odbc:DSN=chicago;UID=root;PWD=__EncPwd1__|||select stg_chicago1.* &#xA;from stg_chicago1" type="V_WString" />
+            <Field name="Results" size="20" source="File: odbc:DSN=chicago;UID=root;PWD=__EncPwd1__|||select stg_chicago1.* &#xA;from stg_chicago1" type="V_WString" />
+            <Field name="Violations" size="65535" source="File: odbc:DSN=chicago;UID=root;PWD=__EncPwd1__|||select stg_chicago1.* &#xA;from stg_chicago1" type="V_WString" />
+            <Field name="Latitude" size="18" source="File: odbc:DSN=chicago;UID=root;PWD=__EncPwd1__|||select stg_chicago1.* &#xA;from stg_chicago1" type="WString" />
+            <Field name="Longitude" size="18" source="File: odbc:DSN=chicago;UID=root;PWD=__EncPwd1__|||select stg_chicago1.* &#xA;from stg_chicago1" type="WString" />
+            <Field name="Location" size="40" source="File: odbc:DSN=chicago;UID=root;PWD=__EncPwd1__|||select stg_chicago1.* &#xA;from stg_chicago1" type="WString" />
+            <Field name="InspectionDate" source="File: odbc:DSN=chicago;UID=root;PWD=__EncPwd1__|||select stg_chicago1.* &#xA;from stg_chicago1" type="DateTime" />
+            <Field name="DI_CreateDate" source="File: odbc:DSN=chicago;UID=root;PWD=__EncPwd1__|||select stg_chicago1.* &#xA;from stg_chicago1" type="DateTime" />
+            <Field name="DI_WorkFlowFileName" size="65535" source="File: odbc:DSN=chicago;UID=root;PWD=__EncPwd1__|||select stg_chicago1.* &#xA;from stg_chicago1" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="354" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords>4DB260473E12D2B9FA659420987AE73D7AB63700282D101930416EFB837F240DEC12D</Passwords>
+          <File RecordLimit="" FileFormat="23">odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* 
+from stg_dallas</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <ReadCentroids>False</ReadCentroids>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <SessionReadOnly>True</SessionReadOnly>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=dallas_stage
+Query=select stg_dallas.* 
+from s...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Inspection_RecordID" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="DI_FileName" size="255" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Inspection_Month" size="8" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="WString" />
+            <Field name="Inspection_Score" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Inspection_Type" size="9" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="WString" />
+            <Field name="Inspection_Year" size="6" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="WString" />
+            <Field name="Inspection_Date" size="10" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="WString" />
+            <Field name="Restaurant_Name" size="255" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Street_Address" size="255" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Street_Direction" size="1" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="WString" />
+            <Field name="Street_Name" size="255" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Street_Number" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Street_Type" size="4" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="WString" />
+            <Field name="Street_Unit" size="5" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="WString" />
+            <Field name="Lat_Long_Location" size="100" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Zip_Code" size="10" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="WString" />
+            <Field name="Violation_Description_1" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_2" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_3" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_4" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_5" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_6" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_7" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_8" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_9" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_10" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_11" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_12" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_13" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_14" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_15" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_16" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_17" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_18" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_19" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_20" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_21" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_22" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_23" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_24" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_25" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_1" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_2" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_3" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_4" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_5" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_6" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_7" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_8" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_9" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_10" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_11" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_12" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_13" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_14" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_15" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_16" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_17" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_18" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_19" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_20" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_21" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_22" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_23" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_24" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_25" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_1" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_2" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_3" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_4" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_5" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_6" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_7" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_8" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_9" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_10" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_11" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_12" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_13" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_14" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_15" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_16" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_17" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_18" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_19" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_20" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_21" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_22" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_23" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_24" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_25" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Points_1" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_2" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_3" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_4" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_5" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_6" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_7" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_8" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_9" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_10" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_11" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_12" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_13" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_14" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_15" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_16" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_17" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_18" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_19" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_20" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_21" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_22" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_23" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_24" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_25" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="DI_CreateDate" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="DateTime" />
+            <Field name="DI_WorkflowFileName" size="255" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Inspection_Date_Out" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="DateTime" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="390" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords>4DB260473E12D2B9FA659420987AE73D7AB63700282D101930416EFB837F240DEC12D</Passwords>
+          <File RecordLimit="" FileFormat="23">odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_date.* 
+from dim_date</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <ReadCentroids>False</ReadCentroids>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <SessionReadOnly>True</SessionReadOnly>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=masterdimension
+Query=select dim_date.* 
+from dim...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="PrimaryKey" name="DateSK" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_date.* &#xA;from dim_date" type="Int32" />
+            <Field name="quarternumber" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_date.* &#xA;from dim_date" type="Int32" />
+            <Field name="dayofWeekNumber" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_date.* &#xA;from dim_date" type="Int32" />
+            <Field name="dayofMonthNumber" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_date.* &#xA;from dim_date" type="Int32" />
+            <Field name="calendardate" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_date.* &#xA;from dim_date" type="Date" />
+            <Field name="monthnumber" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_date.* &#xA;from dim_date" type="Int32" />
+            <Field name="yearnumber" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_date.* &#xA;from dim_date" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="510" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords>4DB260473E12D2B9FA659420987AE73D7AB63700282D101930416EFB837F240DEC12D</Passwords>
+          <File RecordLimit="" FileFormat="23">odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select * 
+from dim_facilitytype</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <ReadCentroids>False</ReadCentroids>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <SessionReadOnly>True</SessionReadOnly>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=masterdimension
+Query=select * 
+from dim_facility...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="PrimaryKey" name="FacilitySK" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select * &#xA;from dim_facilitytype" type="Int32" />
+            <Field name="FacilityType" size="255" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select * &#xA;from dim_facilitytype" type="V_WString" />
+            <Field name="DI_CreateDate" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select * &#xA;from dim_facilitytype" type="DateTime" />
+            <Field name="DI_WorkflowFileName" size="255" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select * &#xA;from dim_facilitytype" type="V_WString" />
+            <Field name="DI_WorkflowDirectory" size="255" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select * &#xA;from dim_facilitytype" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="630" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords>4DB260473E12D2B9FA659420987AE73D7AB63700282D101930416EFB837F240DEC12D</Passwords>
+          <File RecordLimit="" FileFormat="23">odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_foodriskcategory.* 
+from dim_foodriskcategory</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <ReadCentroids>False</ReadCentroids>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <SessionReadOnly>True</SessionReadOnly>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=masterdimension
+Query=select dim_foodriskcategory....</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="PrimaryKey" name="RiskSK" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_foodriskcategory.* &#xA;from dim_foodriskcategory" type="Int32" />
+            <Field name="Risk" size="255" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_foodriskcategory.* &#xA;from dim_foodriskcategory" type="V_WString" />
+            <Field name="DI_CreateDate" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_foodriskcategory.* &#xA;from dim_foodriskcategory" type="DateTime" />
+            <Field name="DI_WorkflowFileName" size="255" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_foodriskcategory.* &#xA;from dim_foodriskcategory" type="V_WString" />
+            <Field name="DI_WorkflowDirectory" size="255" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_foodriskcategory.* &#xA;from dim_foodriskcategory" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="750" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords>4DB260473E12D2B9FA659420987AE73D7AB63700282D101930416EFB837F240DEC12D</Passwords>
+          <File RecordLimit="" FileFormat="23">odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_geo.* 
+from dim_geo</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <ReadCentroids>False</ReadCentroids>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <SessionReadOnly>True</SessionReadOnly>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=masterdimension
+Query=select dim_geo.* 
+from dim_...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="PrimaryKey" name="Address_key" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_geo.* &#xA;from dim_geo" type="Int32" />
+            <Field name="Street_Address" size="255" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_geo.* &#xA;from dim_geo" type="V_WString" />
+            <Field name="City" size="50" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_geo.* &#xA;from dim_geo" type="WString" />
+            <Field name="State" size="10" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_geo.* &#xA;from dim_geo" type="WString" />
+            <Field name="Zip_Code" size="10" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_geo.* &#xA;from dim_geo" type="WString" />
+            <Field name="Last_Long_location" size="100" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_geo.* &#xA;from dim_geo" type="V_WString" />
+            <Field name="DI_Date_Time" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_geo.* &#xA;from dim_geo" type="DateTime" />
+            <Field name="DI_WorkflowFileName" size="255" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_geo.* &#xA;from dim_geo" type="V_WString" />
+            <Field name="DI_WorkflowDirectory" size="255" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_geo.* &#xA;from dim_geo" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="390" y="594" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords>4DB260473E12D2B9FA659420987AE73D7AB63700282D101930416EFB837F240DEC12D</Passwords>
+          <File RecordLimit="" FileFormat="23">odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_inspectiontype.* 
+from dim_inspectiontype</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <ReadCentroids>False</ReadCentroids>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <SessionReadOnly>True</SessionReadOnly>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=masterdimension
+Query=select dim_inspectiontype.*...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="PrimaryKey" name="InspectionTypeSK" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_inspectiontype.* &#xA;from dim_inspectiontype" type="Int32" />
+            <Field name="InspectionType" size="255" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_inspectiontype.* &#xA;from dim_inspectiontype" type="V_WString" />
+            <Field name="DI_CreateDate" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_inspectiontype.* &#xA;from dim_inspectiontype" type="DateTime" />
+            <Field name="DI_WorkflowFileName" size="255" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_inspectiontype.* &#xA;from dim_inspectiontype" type="V_WString" />
+            <Field name="DI_WorkflowDirectory" size="255" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_inspectiontype.* &#xA;from dim_inspectiontype" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="510" y="594" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords>4DB260473E12D2B9FA659420987AE73D7AB63700282D101930416EFB837F240DEC12D</Passwords>
+          <File RecordLimit="" FileFormat="23">odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_outcome.* 
+from dim_outcome</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <ReadCentroids>False</ReadCentroids>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <SessionReadOnly>True</SessionReadOnly>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=masterdimension
+Query=select dim_outcome.* 
+from...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="PrimaryKey" name="OutcomeSK" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_outcome.* &#xA;from dim_outcome" type="Int32" />
+            <Field name="Outcome" size="255" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_outcome.* &#xA;from dim_outcome" type="V_WString" />
+            <Field name="DI_CreateDate" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_outcome.* &#xA;from dim_outcome" type="DateTime" />
+            <Field name="DI_WorkflowFileName" size="255" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_outcome.* &#xA;from dim_outcome" type="V_WString" />
+            <Field name="DI_WorkflowDirectory" size="255" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_outcome.* &#xA;from dim_outcome" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="630" y="594" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords>4DB260473E12D2B9FA659420987AE73D7AB63700282D101930416EFB837F240DEC12D</Passwords>
+          <File RecordLimit="" FileFormat="23">odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* 
+from dim_businesslicenses</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <ReadCentroids>False</ReadCentroids>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <SessionReadOnly>True</SessionReadOnly>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=masterdimension
+Query=select dim_businesslicenses....</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="PrimaryKey" name="LicenseSK" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="Int32" />
+            <Field name="BUSINESS_ACTIVITY" size="1000" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="V_WString" />
+            <Field name="APPLICATION_TYPE" size="6" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="WString" />
+            <Field name="LICENSE_NUMBER" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="Int32" />
+            <Field name="APPLICATION_CREATED_DATE" size="10" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="V_WString" />
+            <Field name="APPLICATION_REQUIREMENTS_COMPLETE" size="10" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="WString" />
+            <Field name="PAYMENT_DATE" size="10" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="WString" />
+            <Field name="CONDITIONAL_APPROVAL" size="1" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="WString" />
+            <Field name="LICENSE_TERM_START_DATE" size="80" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="WString" />
+            <Field name="LICENSE_TERM_EXPIRATION_DATE" size="80" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="WString" />
+            <Field name="LICENSE_APPROVED_FOR_ISSUANCE" size="80" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="WString" />
+            <Field name="DATE_ISSUED" size="80" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="WString" />
+            <Field name="LICENSE_STATUS" size="3" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="WString" />
+            <Field name="BUSINESS_ACTIVITY_ID" size="81" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="V_WString" />
+            <Field name="WARD" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="Int32" />
+            <Field name="PRECINCT" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="Int32" />
+            <Field name="WARD_PRECINCT" size="6" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="WString" />
+            <Field name="POLICE_DISTRICT" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="Int32" />
+            <Field name="LICENSE_CODE" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="Int32" />
+            <Field name="LICENSE_DESCRIPTION" size="60" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="V_WString" />
+            <Field name="STATE" size="2" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="WString" />
+            <Field name="ZIP_CODE" size="5" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="WString" />
+            <Field name="ID" size="16" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="WString" />
+            <Field name="LICENSE_STATUS_CHANGE_DATE" size="80" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="WString" />
+            <Field name="SSA" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="Int32" />
+            <Field name="LATITUDE" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="Double" />
+            <Field name="LONGITUDE" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="Double" />
+            <Field name="LOCATION" size="40" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="WString" />
+            <Field name="License_ID" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="Int32" />
+            <Field name="ACCOUNT_NUMBER" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="Int32" />
+            <Field name="LEGAL_NAME" size="120" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="V_WString" />
+            <Field name="SITE_NUMBER" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="Int32" />
+            <Field name="DOING_BUSINESS_AS_NAME" size="128" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="V_WString" />
+            <Field name="Address" size="255" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="V_WString" />
+            <Field name="CITY" size="30" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="V_WString" />
+            <Field name="DI_CreateDate" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="DateTime" />
+            <Field name="DI_WorkflowFileName" size="255" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="V_WString" />
+            <Field name="DI_WorkflowDirectory" size="255" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_businesslicenses.* &#xA;from dim_businesslicenses" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="522" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="DateSK" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="606" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="FacilitySK" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="714" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="RiskSK" selected="True" />
+            <SelectField field="Risk" selected="False" />
+            <SelectField field="DI_CreateDate" selected="False" />
+            <SelectField field="DI_WorkflowFileName" selected="False" />
+            <SelectField field="DI_WorkflowDirectory" selected="False" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="822" y="366" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Address_key" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="450" y="546" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="InspectionTypeSK" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="570" y="546" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="OutcomeSK" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="690" y="546" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="LicenseSK" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="774" y="594" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords>4DB260473E12D2B9FA659420987AE73D7AB63700282D101930416EFB837F240DEC12D</Passwords>
+          <File RecordLimit="" FileFormat="23">odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_restaurant.* 
+from dim_restaurant</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <ReadCentroids>False</ReadCentroids>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <SessionReadOnly>True</SessionReadOnly>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=masterdimension
+Query=select dim_restaurant.* 
+fr...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="PrimaryKey" name="Restaurant_key" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_restaurant.* &#xA;from dim_restaurant" type="Int32" />
+            <Field name="Restaurant_Name" size="255" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_restaurant.* &#xA;from dim_restaurant" type="V_WString" />
+            <Field name="DI_CreateDate" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_restaurant.* &#xA;from dim_restaurant" type="DateTime" />
+            <Field name="DI_WorkflowFileName" size="255" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_restaurant.* &#xA;from dim_restaurant" type="V_WString" />
+            <Field name="DI_WorkflowDirectory" size="255" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_restaurant.* &#xA;from dim_restaurant" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="846" y="546" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Restaurant_key" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.JoinMultiple.JoinMultiple">
+        <Position x="846" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <JoinByRecPos value="True" />
+          <OutputJoinOnly value="False" />
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Input_#1_DateSK" selected="True" />
+                <SelectField field="Input_#2_FacilitySK" selected="True" />
+                <SelectField field="Input_#3_RiskSK" selected="True" />
+                <SelectField field="Input_#4_Address_key" selected="True" />
+                <SelectField field="Input_#5_InspectionTypeSK" selected="True" />
+                <SelectField field="Input_#6_OutcomeSK" selected="True" />
+                <SelectField field="Input_#7_LicenseSK" selected="True" />
+                <SelectField field="Input_#8_Restaurant_key" selected="True" />
+                <SelectField field="Input_#9_C_ID" selected="True" />
+                <SelectField field="Input_#10_D_ID" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoinMultiple" />
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="450" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="InspectionDate" selected="True" rename="C_ID" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="450" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Inspection_Date" selected="True" rename="D_ID" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="28">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1278" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="23">odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||fact_inspection</File>
+          <Passwords>4DB260473E12D2B9FA659420987AE73D7AB63700282D101930416EFB837F240DEC12D</Passwords>
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <TransactionSize>10000</TransactionSize>
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <PostSQL />
+            <SpatialObjSize>8000</SpatialObjSize>
+            <TableStyle>Quoted</TableStyle>
+            <AppendMap>
+              <AppendMapping mode="Custom">
+                <Field Source="InspectionSK" Dest="InspectionSK" />
+                <Field Source="DateSK" Dest="DateSK" />
+                <Field Source="FacilitySK" Dest="FacilitySK" />
+                <Field Source="RiskSK" Dest="RiskSK" />
+                <Field Source="Address_key" Dest="Address_key" />
+                <Field Source="InspectionTypeSK" Dest="InspectionTypeSK" />
+                <Field Source="OutcomeSK" Dest="OutcomeSK" />
+                <Field Source="LicenseSK" Dest="LicenseSK" />
+                <Field Source="Restaurant_key" Dest="Restaurant_key" />
+                <Field Source="DI_CreateDate" Dest="DI_CreateDate" />
+                <Field Source="DI_WorkFlowFileName" Dest="DI_WorkflowFileName" />
+                <Field Source="DI_WorkFlowDirectory" Dest="DI_WorkflowDirectory" />
+                <Field Source="InspectionDate" Dest="InspectionDate" />
+              </AppendMapping>
+            </AppendMap>
+            <PreSQL />
+            <TransactionMessages>False</TransactionMessages>
+            <OutputOption>Delete</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=masterdimension
+Query=fact_inspection</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="1" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="28" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection name="#4">
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection name="#5">
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection name="#6">
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection name="#7">
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection name="#8">
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection name="#9">
+      <Origin ToolID="26" Connection="Output" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection name="#10">
+      <Origin ToolID="27" Connection="Output" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>MasterFactWorkflow</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="b4f17c40-1c20-46a9-8ade-8da03c36c23e" />
+      <Telemetry>
+        <PreviousWorkflowId value="84f516a8-4640-4969-940d-a1a08a630baa" />
+        <OriginWorkflowId value="84f516a8-4640-4969-940d-a1a08a630baa" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

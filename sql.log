@@ -1,0 +1,46 @@
+ER/Studio Data Architect Generate Database Facility Messages
+ 
+Script: D:\DADABI Assignments\MergedDimensions\physical.sql
+ 
+Date/Time: Wed Mar 29 18:49:15 2023
+--------------------------------------------------------
+
+Generating Dependencies ...
+   Dependency Sql
+
+Generating Tables ...
+
+Generating Views ...
+
+Generating Indexes ...
+   Ref320
+   Ref221
+   Ref122
+   Ref924
+   Ref1326
+   Ref1228
+   Ref1129
+   Ref1430
+   Ref425
+   Ref1532
+
+Generating Foreign Keys ...
+   Dim_BusinessLicenses
+   Dim_Date
+   Dim_FacilityType
+   Dim_FoodRiskCategory
+   Dim_Geo
+   Dim_InspectionType
+   Dim_Outcome
+   Dim_Restaurant
+   Dim_ViolationCodes_SCD
+   Fact_Inspection
+   Fact_Violations
+
+Generating Model Post SQL ...
+   Model Post Sql
+Ending time: Wed Mar 29 18:49:15 2023
+ 
+ 
+Code Generation Complete
+ 

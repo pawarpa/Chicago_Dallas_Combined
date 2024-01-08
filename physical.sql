@@ -1,0 +1,354 @@
+--
+-- ER/Studio Data Architect SQL Code Generation
+-- Project :      Final_Dallas_ER_model.DM1
+--
+-- Date Created : Wednesday, March 29, 2023 18:49:15
+-- Target DBMS : MySQL 8.x
+--
+
+-- 
+-- TABLE: Dim_BusinessLicenses 
+--
+
+CREATE TABLE Dim_BusinessLicenses(
+    LicenseSK                            INT             NOT NULL,
+    BUSINESS_ACTIVITY                    VARCHAR(255),
+    APPLICATION_TYPE                     CHAR(6),
+    LICENSE_NUMBER                       INT,
+    APPLICATION_CREATED_DATE             VARCHAR(10),
+    APPLICATION_REQUIREMENTS_COMPLETE    CHAR(10),
+    PAYMENT_DATE                         CHAR(10),
+    CONDITIONAL_APPROVAL                 CHAR(1),
+    LICENSE_TERM_START_DATE              CHAR(10),
+    LICENSE_TERM_EXPIRATION_DATE         CHAR(10),
+    LICENSE_APPROVED_FOR_ISSUANCE        CHAR(10),
+    DATE_ISSUED                          CHAR(10),
+    LICENSE_STATUS                       CHAR(3),
+    BUSINESS_ACTIVITY_ID                 VARCHAR(81),
+    WARD                                 INT,
+    PRECINCT                             INT,
+    WARD_PRECINCT                        CHAR(6),
+    POLICE_DISTRICT                      INT,
+    LICENSE_CODE                         INT,
+    LICENSE_DESCRIPTION                  VARCHAR(60),
+    STATE                                CHAR(2),
+    ZIP_CODE                             CHAR(5),
+    ID                                   CHAR(16),
+    LICENSE_STATUS_CHANGE_DATE           VARCHAR(10),
+    SSA                                  INT,
+    LATITUDE                             FLOAT(8, 0),
+    LONGITUDE                            FLOAT(8, 0),
+    LOCATION                             CHAR(40),
+    License_ID                           INT,
+    ACCOUNT_NUMBER                       INT,
+    LEGAL_NAME                           VARCHAR(120),
+    SITE_NUMBER                          INT,
+    DOING_BUSINESS_AS_NAME               VARCHAR(128),
+    ADDRESS                              VARCHAR(10),
+    CITY                                 VARCHAR(30),
+    DI_CreateDate                        DATETIME,
+    DI_WorkflowFileName                  VARCHAR(255),
+    DI_WorkflowDirectory                 VARCHAR(255),
+    PRIMARY KEY (LicenseSK)
+)ENGINE=MYISAM
+;
+
+
+
+-- 
+-- TABLE: Dim_Date 
+--
+
+CREATE TABLE Dim_Date(
+    DateSK              INT     NOT NULL,
+    quarternumber       INT,
+    dayofWeekNumber     INT,
+    dayofMonthNumber    INT,
+    calendardate        DATE,
+    monthnumber         INT,
+    yearnumber          INT,
+    PRIMARY KEY (DateSK)
+)ENGINE=MYISAM
+;
+
+
+
+-- 
+-- TABLE: Dim_FacilityType 
+--
+
+CREATE TABLE Dim_FacilityType(
+    FacilitySK              INT             NOT NULL,
+    FacilityType            VARCHAR(255),
+    DI_CreateDate           DATETIME,
+    DI_WorkflowFileName     VARCHAR(255),
+    DI_WorkflowDirectory    VARCHAR(255),
+    PRIMARY KEY (FacilitySK)
+)ENGINE=MYISAM
+;
+
+
+
+-- 
+-- TABLE: Dim_FoodRiskCategory 
+--
+
+CREATE TABLE Dim_FoodRiskCategory(
+    RiskSK                  INT             NOT NULL,
+    Risk                    VARCHAR(255),
+    DI_CreateDate           DATETIME,
+    DI_WorkflowFileName     VARCHAR(255),
+    DI_WorkflowDirectory    VARCHAR(255),
+    PRIMARY KEY (RiskSK)
+)ENGINE=MYISAM
+;
+
+
+
+-- 
+-- TABLE: Dim_Geo 
+--
+
+CREATE TABLE Dim_Geo(
+    GeoSK                   INT             NOT NULL,
+    Street_Address          VARCHAR(255),
+    City                    CHAR(10),
+    State                   CHAR(10),
+    Zip_Code                CHAR(10),
+    Lat_Long_location       VARCHAR(100),
+    DI_Date_Time            DATETIME,
+    DI_WorkflowFileName     VARCHAR(255),
+    DI_WorkflowDirectory    VARCHAR(255),
+    PRIMARY KEY (GeoSK)
+)ENGINE=MYISAM
+;
+
+
+
+-- 
+-- TABLE: Dim_InspectionType 
+--
+
+CREATE TABLE Dim_InspectionType(
+    InspectionTypeSK        INT             NOT NULL,
+    InspectionType          VARCHAR(255),
+    DI_CreateDate           DATETIME,
+    DI_WorkflowFileName     VARCHAR(255),
+    DI_WorkflowDirectory    VARCHAR(255),
+    PRIMARY KEY (InspectionTypeSK)
+)ENGINE=MYISAM
+;
+
+
+
+-- 
+-- TABLE: Dim_Outcome 
+--
+
+CREATE TABLE Dim_Outcome(
+    OutcomeSK               INT             NOT NULL,
+    Outcome                 VARCHAR(255),
+    DI_CreateDate           DATETIME,
+    DI_WorkflowFileName     VARCHAR(255),
+    DI_WorkflowDirectory    VARCHAR(255),
+    PRIMARY KEY (OutcomeSK)
+)ENGINE=MYISAM
+;
+
+
+
+-- 
+-- TABLE: Dim_Restaurant 
+--
+
+CREATE TABLE Dim_Restaurant(
+    RestaurantSK            INT             NOT NULL,
+    Restaurant_Name         VARCHAR(255),
+    DI_CreateDate           DATETIME,
+    DI_WorkflowFileName     VARCHAR(255),
+    DI_WorkflowDirectory    VARCHAR(255),
+    PRIMARY KEY (RestaurantSK)
+)ENGINE=MYISAM
+;
+
+
+
+-- 
+-- TABLE: Dim_ViolationCodes_SCD 
+--
+
+CREATE TABLE Dim_ViolationCodes_SCD(
+    ViolationSK             INT             NOT NULL,
+    ViolationCode           INT,
+    ViolationDescription    VARCHAR(256),
+    Version                 VARCHAR(20),
+    PRIMARY KEY (ViolationSK)
+)ENGINE=MYISAM
+;
+
+
+
+-- 
+-- TABLE: Fact_Inspection 
+--
+
+CREATE TABLE Fact_Inspection(
+    InspectionSK            INT             NOT NULL,
+    InspectionTypeSK        INT,
+    RestaurantSK            INT,
+    DateSK                  INT,
+    GeoSK                   INT,
+    FacilitySK              INT,
+    RiskSK                  INT,
+    OutcomeSK               INT,
+    LicenseSK               INT,
+    InspectionDate          DATE,
+    License_Number          INT,
+    DI_CreateDate           DATE,
+    DI_WorkflowFileName     VARCHAR(255),
+    DI_WorkflowDirectory    VARCHAR(255),
+    PRIMARY KEY (InspectionSK)
+)ENGINE=MYISAM
+;
+
+
+
+-- 
+-- TABLE: Fact_Violations 
+--
+
+CREATE TABLE Fact_Violations(
+    ViolationSK         INT             NOT NULL,
+    InspectionSK        INT             NOT NULL,
+    Violation_Detail    CHAR(10),
+    Violation_Points    CHAR(10),
+    Violation_Memo      CHAR(10),
+    DI_Date_Time        DATETIME        NOT NULL,
+    DI_WorkFlowName     VARCHAR(255),
+    DI_FileName         VARCHAR(255),
+    PRIMARY KEY (ViolationSK, InspectionSK)
+)ENGINE=MYISAM
+;
+
+
+
+-- 
+-- INDEX: Ref320 
+--
+
+CREATE INDEX Ref320 ON Fact_Inspection(RestaurantSK)
+;
+-- 
+-- INDEX: Ref221 
+--
+
+CREATE INDEX Ref221 ON Fact_Inspection(DateSK)
+;
+-- 
+-- INDEX: Ref122 
+--
+
+CREATE INDEX Ref122 ON Fact_Inspection(GeoSK)
+;
+-- 
+-- INDEX: Ref924 
+--
+
+CREATE INDEX Ref924 ON Fact_Inspection(InspectionTypeSK)
+;
+-- 
+-- INDEX: Ref1326 
+--
+
+CREATE INDEX Ref1326 ON Fact_Inspection(RiskSK)
+;
+-- 
+-- INDEX: Ref1228 
+--
+
+CREATE INDEX Ref1228 ON Fact_Inspection(FacilitySK)
+;
+-- 
+-- INDEX: Ref1129 
+--
+
+CREATE INDEX Ref1129 ON Fact_Inspection(OutcomeSK)
+;
+-- 
+-- INDEX: Ref1430 
+--
+
+CREATE INDEX Ref1430 ON Fact_Inspection(LicenseSK)
+;
+-- 
+-- INDEX: Ref425 
+--
+
+CREATE INDEX Ref425 ON Fact_Violations(InspectionSK)
+;
+-- 
+-- INDEX: Ref1532 
+--
+
+CREATE INDEX Ref1532 ON Fact_Violations(ViolationSK)
+;
+-- 
+-- TABLE: Fact_Inspection 
+--
+
+ALTER TABLE Fact_Inspection ADD CONSTRAINT RefDim_Restaurant20 
+    FOREIGN KEY (RestaurantSK)
+    REFERENCES Dim_Restaurant(RestaurantSK)
+;
+
+ALTER TABLE Fact_Inspection ADD CONSTRAINT RefDim_Date21 
+    FOREIGN KEY (DateSK)
+    REFERENCES Dim_Date(DateSK)
+;
+
+ALTER TABLE Fact_Inspection ADD CONSTRAINT RefDim_Geo22 
+    FOREIGN KEY (GeoSK)
+    REFERENCES Dim_Geo(GeoSK)
+;
+
+ALTER TABLE Fact_Inspection ADD CONSTRAINT RefDim_InspectionType24 
+    FOREIGN KEY (InspectionTypeSK)
+    REFERENCES Dim_InspectionType(InspectionTypeSK) ON DELETE RESTRICT ON UPDATE RESTRICT
+;
+
+ALTER TABLE Fact_Inspection ADD CONSTRAINT RefDim_FoodRiskCategory26 
+    FOREIGN KEY (RiskSK)
+    REFERENCES Dim_FoodRiskCategory(RiskSK)
+;
+
+ALTER TABLE Fact_Inspection ADD CONSTRAINT RefDim_FacilityType28 
+    FOREIGN KEY (FacilitySK)
+    REFERENCES Dim_FacilityType(FacilitySK)
+;
+
+ALTER TABLE Fact_Inspection ADD CONSTRAINT RefDim_Outcome29 
+    FOREIGN KEY (OutcomeSK)
+    REFERENCES Dim_Outcome(OutcomeSK)
+;
+
+ALTER TABLE Fact_Inspection ADD CONSTRAINT RefDim_BusinessLicenses30 
+    FOREIGN KEY (LicenseSK)
+    REFERENCES Dim_BusinessLicenses(LicenseSK)
+;
+
+
+-- 
+-- TABLE: Fact_Violations 
+--
+
+ALTER TABLE Fact_Violations ADD CONSTRAINT RefFact_Inspection25 
+    FOREIGN KEY (InspectionSK)
+    REFERENCES Fact_Inspection(InspectionSK) ON DELETE RESTRICT ON UPDATE RESTRICT
+;
+
+ALTER TABLE Fact_Violations ADD CONSTRAINT RefDim_ViolationCodes_SCD32 
+    FOREIGN KEY (ViolationSK)
+    REFERENCES Dim_ViolationCodes_SCD(ViolationSK)
+;
+
+

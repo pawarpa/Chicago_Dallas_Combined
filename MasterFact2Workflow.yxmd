@@ -1,0 +1,658 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="18" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords>4DB260473E12D2B9FA659420987AE73D7AB63700282D101930416EFB837F240DEC12D</Passwords>
+          <File RecordLimit="" FileFormat="23">odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* 
+from stg_dallas</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <ReadCentroids>False</ReadCentroids>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <SessionReadOnly>True</SessionReadOnly>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=dallas_stage
+Query=select stg_dallas.* 
+from s...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Inspection_RecordID" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="DI_FileName" size="255" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Inspection_Month" size="8" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="WString" />
+            <Field name="Inspection_Score" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Inspection_Type" size="9" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="WString" />
+            <Field name="Inspection_Year" size="6" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="WString" />
+            <Field name="Inspection_Date" size="10" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="WString" />
+            <Field name="Restaurant_Name" size="255" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Street_Address" size="255" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Street_Direction" size="1" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="WString" />
+            <Field name="Street_Name" size="255" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Street_Number" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Street_Type" size="4" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="WString" />
+            <Field name="Street_Unit" size="5" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="WString" />
+            <Field name="Lat_Long_Location" size="100" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Zip_Code" size="10" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="WString" />
+            <Field name="Violation_Description_1" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_2" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_3" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_4" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_5" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_6" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_7" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_8" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_9" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_10" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_11" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_12" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_13" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_14" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_15" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_16" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_17" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_18" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_19" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_20" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_21" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_22" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_23" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_24" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Description_25" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_1" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_2" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_3" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_4" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_5" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_6" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_7" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_8" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_9" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_10" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_11" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_12" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_13" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_14" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_15" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_16" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_17" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_18" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_19" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_20" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_21" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_22" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_23" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_24" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Detail_25" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_1" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_2" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_3" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_4" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_5" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_6" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_7" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_8" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_9" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_10" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_11" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_12" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_13" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_14" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_15" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_16" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_17" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_18" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_19" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_20" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_21" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_22" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_23" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_24" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Memo_25" size="65535" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Violation_Points_1" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_2" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_3" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_4" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_5" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_6" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_7" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_8" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_9" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_10" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_11" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_12" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_13" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_14" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_15" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_16" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_17" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_18" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_19" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_20" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_21" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_22" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_23" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_24" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="Violation_Points_25" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="Int32" />
+            <Field name="DI_CreateDate" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="DateTime" />
+            <Field name="DI_WorkflowFileName" size="255" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="V_WString" />
+            <Field name="Inspection_Date_Out" source="File: odbc:DSN=dallas_stage;UID=root;PWD=__EncPwd1__|||select stg_dallas.* &#xA;from stg_dallas" type="DateTime" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="18" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords>4DB260473E12D2B9FA659420987AE73D7AB63700282D101930416EFB837F240DEC12D</Passwords>
+          <File RecordLimit="" FileFormat="23">odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select fact_inspection.* 
+from fact_inspection</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <ReadCentroids>False</ReadCentroids>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <SessionReadOnly>True</SessionReadOnly>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=masterdimension
+Query=select fact_inspection.* 
+f...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="InspectionSK" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select fact_inspection.* &#xA;from fact_inspection" type="Int32" />
+            <Field name="InspectionTypeSK" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select fact_inspection.* &#xA;from fact_inspection" type="Int32" />
+            <Field name="Restaurant_key" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select fact_inspection.* &#xA;from fact_inspection" type="Int32" />
+            <Field name="DateSK" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select fact_inspection.* &#xA;from fact_inspection" type="Int32" />
+            <Field name="Address_key" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select fact_inspection.* &#xA;from fact_inspection" type="Int32" />
+            <Field name="FacilitySK" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select fact_inspection.* &#xA;from fact_inspection" type="Int32" />
+            <Field name="RiskSK" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select fact_inspection.* &#xA;from fact_inspection" type="Int32" />
+            <Field name="OutcomeSK" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select fact_inspection.* &#xA;from fact_inspection" type="Int32" />
+            <Field name="LicenseSK" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select fact_inspection.* &#xA;from fact_inspection" type="Int32" />
+            <Field name="InspectionDate" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select fact_inspection.* &#xA;from fact_inspection" type="Date" />
+            <Field name="License_Number" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select fact_inspection.* &#xA;from fact_inspection" type="Int32" />
+            <Field name="DI_CreateDate" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select fact_inspection.* &#xA;from fact_inspection" type="Date" />
+            <Field name="DI_WorkflowFileName" size="255" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select fact_inspection.* &#xA;from fact_inspection" type="V_WString" />
+            <Field name="DI_WorkflowDirectory" size="255" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select fact_inspection.* &#xA;from fact_inspection" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="18" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords>4DB260473E12D2B9FA659420987AE73D7AB63700282D101930416EFB837F240DEC12D</Passwords>
+          <File RecordLimit="" FileFormat="23">odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_violationcodes_scd.* 
+from dim_violationcodes_scd</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <ReadCentroids>False</ReadCentroids>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <SessionReadOnly>True</SessionReadOnly>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=masterdimension
+Query=select dim_violationcodes_sc...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="ViolationSK" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_violationcodes_scd.* &#xA;from dim_violationcodes_scd" type="Int32" />
+            <Field name="ViolationCode" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_violationcodes_scd.* &#xA;from dim_violationcodes_scd" type="Int32" />
+            <Field name="ViolationDescription" size="10000" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_violationcodes_scd.* &#xA;from dim_violationcodes_scd" type="V_WString" />
+            <Field name="Version" size="20" source="File: odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||select dim_violationcodes_scd.* &#xA;from dim_violationcodes_scd" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="162" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Violation_Detail_1" selected="True" />
+            <SelectField field="Violation_Detail_2" selected="True" />
+            <SelectField field="Violation_Detail_3" selected="True" />
+            <SelectField field="Violation_Detail_4" selected="True" />
+            <SelectField field="Violation_Detail_5" selected="True" />
+            <SelectField field="Violation_Detail_6" selected="True" />
+            <SelectField field="Violation_Detail_7" selected="True" />
+            <SelectField field="Violation_Detail_8" selected="True" />
+            <SelectField field="Violation_Detail_9" selected="True" />
+            <SelectField field="Violation_Detail_10" selected="True" />
+            <SelectField field="Violation_Detail_11" selected="True" />
+            <SelectField field="Violation_Detail_12" selected="True" />
+            <SelectField field="Violation_Detail_13" selected="True" />
+            <SelectField field="Violation_Detail_14" selected="True" />
+            <SelectField field="Violation_Detail_15" selected="True" />
+            <SelectField field="Violation_Detail_16" selected="True" />
+            <SelectField field="Violation_Detail_17" selected="True" />
+            <SelectField field="Violation_Detail_18" selected="True" />
+            <SelectField field="Violation_Detail_19" selected="True" />
+            <SelectField field="Violation_Detail_20" selected="True" />
+            <SelectField field="Violation_Detail_21" selected="True" />
+            <SelectField field="Violation_Detail_22" selected="True" />
+            <SelectField field="Violation_Detail_23" selected="True" />
+            <SelectField field="Violation_Detail_24" selected="True" />
+            <SelectField field="Violation_Detail_25" selected="True" />
+            <SelectField field="Violation_Memo_1" selected="True" />
+            <SelectField field="Violation_Memo_2" selected="True" />
+            <SelectField field="Violation_Memo_3" selected="True" />
+            <SelectField field="Violation_Memo_4" selected="True" />
+            <SelectField field="Violation_Memo_5" selected="True" />
+            <SelectField field="Violation_Memo_6" selected="True" />
+            <SelectField field="Violation_Memo_7" selected="True" />
+            <SelectField field="Violation_Memo_8" selected="True" />
+            <SelectField field="Violation_Memo_9" selected="True" />
+            <SelectField field="Violation_Memo_10" selected="True" />
+            <SelectField field="Violation_Memo_11" selected="True" />
+            <SelectField field="Violation_Memo_12" selected="True" />
+            <SelectField field="Violation_Memo_13" selected="True" />
+            <SelectField field="Violation_Memo_14" selected="True" />
+            <SelectField field="Violation_Memo_15" selected="True" />
+            <SelectField field="Violation_Memo_16" selected="True" />
+            <SelectField field="Violation_Memo_17" selected="True" />
+            <SelectField field="Violation_Memo_18" selected="True" />
+            <SelectField field="Violation_Memo_19" selected="True" />
+            <SelectField field="Violation_Memo_20" selected="True" />
+            <SelectField field="Violation_Memo_21" selected="True" />
+            <SelectField field="Violation_Memo_22" selected="True" />
+            <SelectField field="Violation_Memo_23" selected="True" />
+            <SelectField field="Violation_Memo_24" selected="True" />
+            <SelectField field="Violation_Memo_25" selected="True" />
+            <SelectField field="Violation_Points_1" selected="True" />
+            <SelectField field="Violation_Points_2" selected="True" />
+            <SelectField field="Violation_Points_3" selected="True" />
+            <SelectField field="Violation_Points_4" selected="True" />
+            <SelectField field="Violation_Points_5" selected="True" />
+            <SelectField field="Violation_Points_6" selected="True" />
+            <SelectField field="Violation_Points_7" selected="True" />
+            <SelectField field="Violation_Points_8" selected="True" />
+            <SelectField field="Violation_Points_9" selected="True" />
+            <SelectField field="Violation_Points_10" selected="True" />
+            <SelectField field="Violation_Points_11" selected="True" />
+            <SelectField field="Violation_Points_12" selected="True" />
+            <SelectField field="Violation_Points_13" selected="True" />
+            <SelectField field="Violation_Points_14" selected="True" />
+            <SelectField field="Violation_Points_15" selected="True" />
+            <SelectField field="Violation_Points_16" selected="True" />
+            <SelectField field="Violation_Points_17" selected="True" />
+            <SelectField field="Violation_Points_18" selected="True" />
+            <SelectField field="Violation_Points_19" selected="True" />
+            <SelectField field="Violation_Points_20" selected="True" />
+            <SelectField field="Violation_Points_21" selected="True" />
+            <SelectField field="Violation_Points_22" selected="True" />
+            <SelectField field="Violation_Points_23" selected="True" />
+            <SelectField field="Violation_Points_24" selected="True" />
+            <SelectField field="Violation_Points_25" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="162" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="InspectionSK" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="174" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="ViolationSK" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="270" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Violation_Detail_1]+[Violation_Detail_2]+[Violation_Detail_3]+[Violation_Detail_4]+[Violation_Detail_5]+[Violation_Detail_6]+[Violation_Detail_7]+[Violation_Detail_8]+[Violation_Detail_9]+[Violation_Detail_10]+[Violation_Detail_11]+[Violation_Detail_12]+[Violation_Detail_13]+[Violation_Detail_14]+[Violation_Detail_15]+[Violation_Detail_16]+[Violation_Detail_17]+[Violation_Detail_18]+[Violation_Detail_19]+[Violation_Detail_20]+ [Violation_Detail_21]+[Violation_Detail_22]+[Violation_Detail_23]+[Violation_Detail_24]+[Violation_Detail_25]" field="Violation_Detail" size="1073741823" type="V_WString" />
+            <FormulaField expression="[Violation_Memo_1]+ [Violation_Memo_2]+[Violation_Memo_3]+[Violation_Memo_4]+[Violation_Memo_5]+[Violation_Memo_6]+[Violation_Memo_7]+[Violation_Memo_8]+[Violation_Memo_9]+[Violation_Memo_10]+[Violation_Memo_11]+[Violation_Memo_12]+[Violation_Memo_13]+[Violation_Memo_13]+[Violation_Memo_14]+[Violation_Memo_15]+ [Violation_Memo_16]+[Violation_Memo_17]+[Violation_Memo_18]+[Violation_Memo_19]+[Violation_Memo_20]+[Violation_Memo_21]+[Violation_Memo_22]+[Violation_Memo_23]+[Violation_Memo_24]+[Violation_Memo_25]" field="Violation_Memo" size="1073741823" type="V_WString" />
+            <FormulaField expression="[Violation_Points_1]+[Violation_Points_2]+ [Violation_Points_3]+[Violation_Points_4]+[Violation_Points_5]+[Violation_Points_6]+[Violation_Points_7]+[Violation_Points_8]+[Violation_Points_9]+[Violation_Points_10]+[Violation_Points_11]+ [Violation_Points_12]+[Violation_Points_13]+ [Violation_Points_14]+[Violation_Points_15]+[Violation_Points_16]+[Violation_Points_17]+[Violation_Points_18] + [Violation_Points_19]+[Violation_Points_20]+[Violation_Points_21]+[Violation_Points_22]+[Violation_Points_23]+[Violation_Points_24]+[Violation_Points_25]  " field="Violation_Points" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Violation_Detail = [Violation_Detail_1]+[Violation_Detail_2]+[Violation_Detail_3...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="366" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Violation_Detail" selected="True" />
+            <SelectField field="Violation_Memo" selected="True" />
+            <SelectField field="Violation_Points" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.JoinMultiple.JoinMultiple">
+        <Position x="486" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <JoinByRecPos value="True" />
+          <OutputJoinOnly value="False" />
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Input_#1_Violation_Detail" selected="True" />
+                <SelectField field="Input_#1_Violation_Memo" selected="True" />
+                <SelectField field="Input_#1_Violation_Points" selected="True" />
+                <SelectField field="Input_#2_InspectionSK" selected="True" />
+                <SelectField field="Input_#3_ViolationSK" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoinMultiple" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="594" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="DateTimeNow()" field="DI_CreateDate" size="19" type="DateTime" />
+            <FormulaField expression="[Engine.WorkflowFileName]" field="DI_WorkFlowFileName" size="1073741823" type="V_WString" />
+            <FormulaField expression="[Engine.WorkflowDirectory]" field="DI_WorkFlowDirectory" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DI_CreateDate = DateTimeNow()
+DI_WorkFlowFileName = [Engine.WorkflowFileName]
+DI...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="690" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="InspectionSK" selected="True" />
+            <SelectField field="ViolationSK" selected="True" />
+            <SelectField field="Violation_Detail" selected="True" size="10000" />
+            <SelectField field="Violation_Memo" selected="True" size="255" />
+            <SelectField field="Violation_Points" selected="True" size="255" />
+            <SelectField field="DI_CreateDate" selected="True" />
+            <SelectField field="DI_WorkFlowFileName" selected="True" size="255" />
+            <SelectField field="DI_WorkFlowDirectory" selected="True" size="255" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="798" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="23">odbc:DSN=masterdimension;UID=root;PWD=__EncPwd1__|||fact_violations</File>
+          <Passwords>4DB260473E12D2B9FA659420987AE73D7AB63700282D101930416EFB837F240DEC12D</Passwords>
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <TransactionSize>10000</TransactionSize>
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <PostSQL />
+            <SpatialObjSize>8000</SpatialObjSize>
+            <TableStyle>Quoted</TableStyle>
+            <AppendMap>
+              <AppendMapping mode="Custom">
+                <Field Source="InspectionSK" Dest="InspectionSK" />
+                <Field Source="ViolationSK" Dest="ViolationSK" />
+                <Field Source="Violation_Detail" Dest="Violation_Detail" />
+                <Field Source="Violation_Memo" Dest="Violation_Memo" />
+                <Field Source="Violation_Points" Dest="Violation_Points" />
+                <Field Source="DI_CreateDate" Dest="DI_Date_Time" />
+                <Field Source="DI_WorkFlowFileName" Dest="DI_FileName" />
+                <Field Source="DI_WorkFlowDirectory" Dest="DI_WorkFlowName" />
+              </AppendMapping>
+            </AppendMap>
+            <PreSQL />
+            <TransactionMessages>False</TransactionMessages>
+            <OutputOption>Delete</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=masterdimension
+Query=fact_violations</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="798" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>MasterFact2Workflow</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="a9c5b895-427b-4403-bd42-4940b1a03526" />
+      <Telemetry>
+        <PreviousWorkflowId value="b572c21b-c541-43d4-86ad-651c7b6c8d96" />
+        <OriginWorkflowId value="b572c21b-c541-43d4-86ad-651c7b6c8d96" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
